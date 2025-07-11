@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Advanced Entertainment Web App with movies, TV shows, and dynamic features." />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Entertainment Web App</title>
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Script -->
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <div class="app-container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" aria-label="Sidebar Navigation">
+      <div class="logo" role="banner" aria-label="App Logo">🎬</div>
+      <nav class="nav" role="navigation">
+        <a href="#home" class="nav-item active" aria-label="Home">🏠</a>
+        <a href="#trending" class="nav-item" aria-label="Trending">🔥</a>
+        <a href="#bookmarks" class="nav-item" aria-label="Bookmarks">🔖</a>
+        <a href="#profile" class="nav-item profile" aria-label="Profile">👤</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content" role="main">
+      
+      <!-- Header with Search and Theme Toggle -->
+      <header class="header" role="search">
+        <div class="search-container">
+          <label for="search" class="visually-hidden">Search</label>
+          <input type="search" id="search" placeholder="Search for movies or TV series" aria-label="Search content" autocomplete="off" />
+          <button id="toggleTheme" title="Toggle Theme" aria-label="Toggle Dark/Light Theme">🌓</button>
+        </div>
+      </header>
+
+      <!-- Main Dynamic Content Section -->
+      <section id="content" aria-live="polite">
+        <!-- Content populated by app.js -->
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer" role="contentinfo">
+        <p>© 2025 Rishabh Entertainment. All rights reserved.</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Modal Container -->
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-content" role="document">
+      <!-- Modal content will be dynamically inserted here -->
+    </div>
+  </div>
+</body>
+</html>
